@@ -1,0 +1,22 @@
+{
+    "model": {
+        "model_path": "/home/srezaee/projects/model_histories/model_v7/training_output_v7/checkpoints/best_model_v2.h5",
+        "normalization_path": "/home/srezaee/projects/model_histories/model_v6/processed_data_v6/normalization_params.npz",
+        "_comment": "Path to trained model and normalization parameters"
+    },
+    
+    "data": {
+        "test_data_path": "/home/srezaee/projects/model_histories/model_v6/processed_data_v6/test_data.npz",
+        "_comment": "Path to preprocessed test data"
+    },
+    
+    "output": {
+        "eval_dir": "/home/srezaee/projects/model_histories/model_v7/evaluation_results_v7",
+        "_comment": "Output directory for evaluation results"
+    },
+    
+    "visualization": {
+        "n_samples": 10,
+        "_comment": "Number of sample comparisons to generate"
+    }
+}

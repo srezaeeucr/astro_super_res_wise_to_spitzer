@@ -1,0 +1,55 @@
+{
+    "data": {
+        "train_data_path": "/home/srezaee/projects/model_histories/model_v6/processed_data_v6/train_data.npz",
+        "test_data_path": "/home/srezaee/projects/model_histories/model_v6/processed_data_v6/test_data.npz",
+        "normalization_path": "/home/srezaee/projects/model_histories/model_v6/processed_data_v6/normalization_params.npz",
+        "_comment": "Paths to preprocessed data from process_data.py"
+    },
+    
+    "model": {
+        "base_filters": 128,
+        "n_residual_blocks": 32,
+        "n_residual_groups": 4,
+        "use_progressive_supervision": true,
+        
+        "loss": {
+            "type": "source_focused",
+            "_comment_type": "Options: 'source_focused' (recommended) or 'combined'",
+            
+            "ssim_max_val": 4.0,
+            "_comment_ssim": "For asinh-normalized data in ~[0,1], use 2.0",
+            
+            "source_threshold": 0.5,
+            "_comment_threshold": "Pixels above this are considered sources",
+            
+            "source_weight": 3.0,
+            "background_weight": 0.5,
+            
+            "huber_delta": 1,
+            "huber_weight": 0.5,
+            "ssim_weight": 0.35,
+            "gradient_weight": 0.15,
+            
+            "l1_weight": 0.4,
+            "l2_weight": 0.2
+        }
+    },
+    
+    "training": {
+        "epochs": 200,
+        "batch_size": 32,
+        "learning_rate": 0.0002,
+        "lr_decay_steps": 1000,
+        "lr_decay_rate": 0.98,
+        "weight_decay": 0.0005,
+        
+        "early_stopping": true,
+        "early_stopping_patience": 40,
+        "reduce_lr_on_plateau": true
+    },
+    
+    "output": {
+        "base_dir": "/home/srezaee/projects/model_histories/model_v6/training_output_v7",
+        "_comment": "All outputs: models, logs, visualizations, checkpoints"
+    }
+}

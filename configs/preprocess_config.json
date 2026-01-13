@@ -1,0 +1,34 @@
+{
+    "data": {
+        "input_dataset_path": "/home/srezaee/projects/model_histories/model_v6/output_pairwise_v6/data/spitzer_wise_paired_dataset.npz",
+        "_comment": "Path to raw paired dataset from create_paired_dataset.py"
+    },
+    
+    "output": {
+        "processed_data_dir": "/home/srezaee/projects/model_histories/model_v6/processed_data_v6",
+        "_comment": "Output directory for processed train/test splits"
+    },
+    
+    "split": {
+        "test_size": 0.15,
+        "random_seed": 42,
+        "_comment": "15% test split with fixed seed for reproducibility"
+    },
+    
+    "normalization": {
+        "method": "asinh",
+        "_comment": "Options: 'asinh' (recommended) or 'minmax'"
+    },
+    
+    "preprocessing": {
+        "remove_nan": true,
+        "_comment": "Remove samples with NaN/Inf values"
+    },
+    
+    "wise_calibration": {
+        "magzp": 22.5,
+        "vega_to_ab_offset": 2.699,
+        "pixel_scale_arcsec": 2.75,
+        "_comment": "unWISE W1 calibration parameters for DN → MJy/sr conversion"
+    }
+}

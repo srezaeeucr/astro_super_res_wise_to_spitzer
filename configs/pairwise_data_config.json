@@ -1,0 +1,76 @@
+{
+  "data": {
+    "spitzer": {
+      "file_path": "/home/srezaee/projects/wise2spitzer_sr/data/spitzer/CDS_COSMOS_ch1_ima_v24lin.fits",
+      "pixel_scale": 0.6,
+      "band": "ch1",
+      "wavelength_um": 3.6
+    },
+    "wise": {
+      "tile_files": [
+        "/home/srezaee/projects/wise2spitzer_sr/data/wise/unwise-1482p015-w1-img-u.fits",
+        "/home/srezaee/projects/wise2spitzer_sr/data/wise/unwise-1497p015-w1-img-u.fits",
+        "/home/srezaee/projects/wise2spitzer_sr/data/wise/unwise-1497p030-w1-img-u.fits",
+        "/home/srezaee/projects/wise2spitzer_sr/data/wise/unwise-1512p015-w1-img-u.fits",
+        "/home/srezaee/projects/wise2spitzer_sr/data/wise/unwise-1512p030-w1-img-u.fits"
+      ],
+      "pixel_scale": 2.75,
+      "band": "w1",
+      "wavelength_um": 3.4
+    },
+    "catalog": {
+      "file_path": "/home/srezaee/projects/wise2spitzer_sr/data/cosmos/COSMOS2020_CLASSIC_R1_v2.2_p3.fits",
+      "ra_column": "ALPHA_J2000",
+      "dec_column": "DELTA_J2000",
+      "filters": [
+        {
+          "column": "IRAC_CH1_FLUX",
+          "error_column": "IRAC_CH1_FLUXERR",
+          "operator": "SNR_GT",
+          "value": 5.0,
+          "min_flux": 0.0
+        },
+        {
+          "column": "lp_type",
+          "operator": "==",
+          "value": 0
+        },
+        {
+          "column": "IRAC_CH1_MAG",
+          "operator": "<",
+          "value": 25
+        }
+      ]
+    }
+  },
+  
+  "cutouts": {
+    "spitzer_size_pixels": 64,
+    "wise_size_pixels": 14,
+    "physical_size_arcsec": 38.4,
+    "comment": "64 Spitzer pixels @ 0.6 arcsec/pix = 38.4 arcsec, 14 WISE pixels @ 2.75 arcsec/pix = 38.5 arcsec, both have same physical units in V6"
+  },
+  
+  "processing": {
+    "max_sources": 200000,
+    "log_interval": 2000,
+    "random_seed": 42
+  },
+  
+  "output": {
+    "base_dir": "/home/srezaee/projects/model_histories/model_v6/output_pairwise_v6",
+    "dataset_filename": "spitzer_wise_paired_dataset.npz"
+  },
+  
+  "visualization": {
+    "n_alignment_examples": 5,
+    "dpi_alignment": 150,
+    "dpi_coverage": 300,
+    "dpi_statistics": 300
+  },
+  
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}

@@ -1,0 +1,11 @@
+data/
+outputs/
+*.fits
+*.fit
+*.fits.gz
+*.npy
+*.npz
+*.h5
+__pycache__/
+.DS_Store
+
