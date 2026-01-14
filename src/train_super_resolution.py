@@ -11,9 +11,8 @@ Key changes:
 Architecture: Enhanced RCAN (Residual Channel Attention Network)
 Target: 14×14 WISE → 64×64 Spitzer super-resolution
 
-Author: Enhanced for astronomical super-resolution
-Version: 2.1 (with unit-corrected preprocessing)
-"""
+Author: Saeed Rezaee, PhD
+Date: Jan, 2026 """
 
 import os
 import json
