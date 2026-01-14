@@ -1,13 +1,10 @@
 """
 Spitzer-WISE Paired Dataset Creation Pipeline
 ==============================================
-Creates paired cutouts for super-resolution training with comprehensive logging
-and visualization.
+Creates paired cutouts for super-resolution training 
 
-UPDATED: Added unit metadata to saved dataset
-
-Author: Generated for COSMOS Super-Resolution Project
-Date: 2024
+Author: Saeed Rezaee, PhD
+Date: Jan, 2026
 """
 
 import os

@@ -8,8 +8,6 @@ Key changes from V1:
 2. Uses asinh normalization (handles negatives + dynamic range)
 3. Does NOT clip negative values (they're valid background noise)
 4. Stores complete denormalization parameters
-
-Run this ONCE before training!
 """
 
 import os

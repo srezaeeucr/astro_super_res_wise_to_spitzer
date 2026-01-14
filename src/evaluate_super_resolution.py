@@ -8,8 +8,8 @@ Key changes:
 - Converts predictions back to physical units (MJy/sr)
 - Updated metrics for astronomical data quality assessment
 
-Author: Updated for unit-corrected preprocessing
-Version: 2.1
+Author: Saeed Rezaee, PhD
+Date: Jan, 2026
 """
 
 import os
